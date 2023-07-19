@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .title-form {
+      background-color: rgba(0, 255, 128, 0.6);
+      text-align: left;
+      color: rgba(0, 0, 255, 0.7);
+      margin: 10px;
+      margin-top: 10px;
+    }
+    .flex-container {
+      display: flex;
+      align-items: stretch;
+      margin: 10px;
+    }
+    .flex-form-lable {
+      flex-basis: 100px;
+      text-align: right;
+      padding-right: 10px;
+      color: blue;
+    }
+    .flex-form-input {
+      flex-basis: 400px;
+    }
+    .flex-form-table {
+      flex-basis: 400px;
+      flex-direction: row;
+    }
+    .flex-form-row {
+      flex: 0 0 calc(33.33% - 10px); /* Điều chỉnh độ rộng và khoảng cách giữa các cột */
+      margin-right: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    .flex-form-row > label {
+      color: red;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 10px;
+    }
+  </style>
+
+  <body>
+    <form action="#" style="width: 700px; background-color: rgb(255, 190, 71)">
+      <h2 class="title-form">Đăng ký học viên</h2>
+
+      <div class="flex-container">
+        <div class="flex-form-lable">
+          <label>Họ và Tên</label>
+        </div>
+        <div>
+          <input type="text" name="yourname" />
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-form-lable">
+          <label>Ngày sinh</label>
+        </div>
+        <div>
+          <input type="text" name="birthday" />
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-form-lable">
+          <label>Giới tính</label>
+        </div>
+        <div>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Nam</label>
+
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Nữ</label>
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-form-lable">
+          <label>Địa chỉ</label>
+        </div>
+        <div class="flex-form-input">
+          <textarea name="address" cols="30" rows="5"></textarea>
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-form-lable">
+          <label>lớp</label>
+        </div>
+        <div class="flex-form-input">
+          <select name="class" id="">
+            <option value="">-- Chọn lớp --</option>
+            <option value="K20">K20</option>
+            <option value="K21">K21</option>
+            <option value="K22">K22</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-form-lable">
+          <label>email</label>
+        </div>
+        <div class="flex-form-input">
+          <input type="email" name="email" />
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-form-lable">
+          <label>Điện thoại</label>
+        </div>
+        <div class="flex-form-input">
+          <input type="text" name="phone" />
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-form-lable"></div>
+        <div class="flex-form-input">
+          <button>Gửi thông tin</button>
+          <button>nhâp lại</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

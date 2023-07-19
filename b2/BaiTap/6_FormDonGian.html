@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .title-form {
+      background-color: red;
+      text-align: center;
+      color: #fff;
+    }
+    .flex-container {
+      display: flex;
+      align-items: stretch;
+      margin: 10px;
+    }
+    .flex-form-lable {
+      flex-basis: 100px;
+      text-align: right;
+      padding-right: 10px;
+      color: blue;
+    }
+    .flex-form-input {
+      flex-basis: 400px;
+    }
+    .flex-form-table {
+      flex-basis: 400px;
+      flex-direction: row;
+    }
+    .flex-form-row {
+      flex: 0 0 calc(33.33% - 10px); /* Điều chỉnh độ rộng và khoảng cách giữa các cột */
+      margin-right: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    .flex-form-row > label {
+      color: red;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 10px;
+    }
+  </style>
+
+  <body>
+    <form action="#" style="width: 700px">
+      <h2 class="title-form">Sở thích của bạn</h2>
+
+      <div class="flex-container">
+        <div class="flex-form-lable">
+          <label>Họ và Tên</label>
+        </div>
+        <div>
+          <input type="text" name="yourname" />
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-form-lable">
+          <label>email</label>
+        </div>
+        <div class="flex-form-input">
+          <input type="email" name="email" />
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <label class="flex-form-lable" style="align-items: center"
+          >Sở thích
+        </label>
+
+        <div class="grid-container flex-form-input">
+          <div class="flex-form-row">
+            <input type="checkbox" name="hobby" />
+            <label>thể thao</label>
+          </div>
+
+          <div class="flex-form-row">
+            <input type="checkbox" name="hobby" />
+            <label>Âm nhạc</label>
+          </div>
+
+          <div class="flex-form-row">
+            <input type="checkbox" name="hobby" />
+            <label>Đọc sách</label>
+          </div>
+
+          <div class="flex-form-row">
+            <input type="checkbox" name="hobby" />
+            <label>Lướt Web</label>
+          </div>
+
+          <div class="flex-form-row">
+            <input type="checkbox" name="hobby" />
+            <label>Chơi game</label>
+          </div>
+
+          <div class="flex-form-row">
+            <input type="checkbox" name="hobby" />
+            <label>Điện ảnh</label><br />
+          </div>
+
+          <div class="flex-form-row">
+            <input type="checkbox" name="hobby" />
+            <label>Du lịch</label><br />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-form-lable"></div>
+        <div class="flex-form-input">
+          <button>Gửi thông tin</button>
+          <button>nhâp lại</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

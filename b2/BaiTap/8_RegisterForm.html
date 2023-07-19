@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .gender-container {
+      margin: 20px;
+      padding: 10px;
+      background-color: #fff;
+    }
+    button {
+      border-radius: 10px;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+  </style>
+  <body>
+    <form action="#" method="post">
+      <label for="name">Họ và Tên</label><br />
+      <input type="text" name="name" id="name" /><br />
+
+      <label for="email">Email</label><br />
+      <input type="email" name="email" id="email" /><br />
+
+      <label for="phone">Số điện thoại</label><br />
+      <input type="text" name="phone" id="phone" /><br />
+
+      <div>
+        <label>Giới tính:</label><br />
+
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Nam</label>
+
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Nữ</label>
+      </div>
+      <button>Đăng Ký</button>
+    </form>
+  </body>
+</html>
