@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bt3</title>
+    <style>
+      body {
+        width: 98.5%;
+        text-align: center;
+        align-items: center;
+        display: grid;
+      }
+      .header {
+        display: flex;
+        width: 100%;
+        height: 50px;
+      }
+      .logo {
+        background-color: brown;
+        width: 20%;
+        display: grid;
+        align-items: center;
+      }
+      .banner {
+        background-color: aqua;
+        width: 80%;
+        display: grid;
+        align-items: center;
+      }
+
+      .nav {
+        padding: 5px;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0px;
+        height: 40px;
+      }
+      .nav-link,
+      .footer-link {
+        display: flex;
+      }
+      .link {
+        padding: 10px;
+        border: 2px;
+      }
+      hr {
+        width: 1;
+        color: #000;
+        size: 500;
+      }
+
+      .nav-search {
+        border: #000 1px solid;
+        width: 15%;
+        height: 25px;
+        border-radius: 20px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        padding-left: 3px;
+      }
+      .nav-search img {
+        width: 15px;
+        height: 15px;
+      }
+      .wrapper-content {
+        width: 100%;
+        display: flex;
+        height: 400px;
+        border: #005 2px solid;
+      }
+      .left {
+        width: 15%;
+        height: 100%;
+        padding: 2px;
+      }
+      .intro {
+        width: 90%;
+        height: 45%;
+        border: 1px solid salmon;
+        margin-bottom: 3px;
+      }
+      .ads {
+        width: 90%;
+        height: 50%;
+        border: 1px solid salmon;
+      }
+      .content {
+        width: calc(70% - 15px);
+      }
+      .hot-new {
+        display: flex;
+        width: calc(100% - 7px);
+        height: 28%;
+        margin: 2px;
+        border: 1px rgb(168, 213, 78) solid;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .hot-new-content {
+        width: 48%;
+        height: calc(100% - 4px);
+        display: grid;
+        align-items: center;
+        border: 1px aqua solid;
+      }
+      .new {
+        display: flex;
+        flex-wrap: wrap;
+        height: 68%;
+      }
+      .new-content {
+        width: calc(33.33% - 10px);
+        margin: 5px; /* Khoảng cách giữa các phần tử con */
+        height: 47%; /* Chiều cao của các phần tử con (thay đổi tùy ý) */
+        background-color: #e0e0e0;
+      }
+
+      .right {
+        width: calc(15% - 2px);
+        height: 98%;
+        border: 1px solid sandybrown;
+        padding: 2px;
+      }
+      .img {
+        width: calc(100% - 4px);
+        height: calc(33.3% - 4px);
+        border: coral 1px solid;
+      }
+      .footer {
+        width: calc(100% - 4px);
+        height: 40px;
+        border: 2px solid gray;
+        display: flex;
+        justify-content: space-between;
+      }
+      .brand {
+        margin: 2px;
+        border: chartreuse 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">logo</div>
+      <div class="banner">banner</div>
+    </header>
+    <nav class="nav">
+      <div class="nav-link">
+        <a href="" class="link">Home</a>
+        <hr />
+        <a href="" class="link">Student</a>
+        <hr />
+        <a href="" class="link">Cources</a>
+        <hr />
+        <a href="" class="link">About Us</a>
+        <hr />
+        <a href="" class="link">Contact Us</a>
+      </div>
+      <div class="nav-search"><img src="search.png" alt=""></i>Search</div>
+    </nav>
+    <div class="wrapper-content">
+      <div class="left">
+        <div class="intro">
+          <p>intro</p>
+          <p>news</p>
+          <p>education</p>
+          <p>register</p>
+          <p>cources</p>
+        </div>
+        <div class="ads">ads</div>
+      </div>
+      <div class="content">
+        <div class="hot-new">
+          <div class="hot-new-content">hot new</div>
+          <div class="hot-new-content">photo side</div>
+        </div>
+        <div class="new">
+          <div class="new-content">new content</div>
+          <div class="new-content">new content</div>
+          <div class="new-content">new content</div>
+          <div class="new-content">new content</div>
+          <div class="new-content">new content</div>
+          <div class="new-content">new content</div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="../../b1/BaiTap/doraemon.jpg" alt="calendar" class="img" />
+        <img src="../../b1/BaiTap/doraemon.jpg" alt="chart" class="img" />
+        <img src="../../b1/BaiTap/doraemon.jpg" alt="map" class="img" />
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="brand">my web &COPY;</div>
+      <div class="footer-link">
+        <a href="" class="link">Home</a>
+        <hr />
+        <a href="" class="link">Student</a>
+        <hr />
+        <a href="" class="link">Cources</a>
+        <hr />
+        <a href="" class="link">About Us</a>
+        <hr />
+        <a href="" class="link">Contact Us</a>
+      </div>
+    </footer>
+  </body>
+</html>
