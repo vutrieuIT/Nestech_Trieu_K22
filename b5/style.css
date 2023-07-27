@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.container {
+    width: calc(100%-30px);
+    padding: 30px;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+.top {
+    width: calc(100% - 20px);
+    padding-left: 20px;
+    height: 20px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}
+
+.about {
+    width: 100%;
+    height: 500px;
+    display: flex;
+
+}
+
+.about-content {
+    width: calc(50% - 100px);
+    padding: 50px;
+}
+
+p.content {
+    font-size: 1.7rem;
+}
+
+p.ps {
+    font-size: 1rem;
+}
+
+.about-img {
+    width: calc(50% -20px);
+    height: calc(50% -20px);
+}
+
+.img-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.img-content img {
+    width: calc(30% - 30px);
+    margin-top: 40px;
+    aspect-ratio: 1/1;
+}
+
+.person {
+    width: 100%;
+}
+
+.person-content {
+    width: calc(100%-30px);
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+
+.person-img {
+    width: 20%;
+    aspect-ratio: 1/1;
+    padding: 3px;
+}
+
+.person-info {
+    width: 50%;
+    font-size: large;
+}
+
+.name {
+    font-size: x-large;
+}
+
+.job,
+.slogan {
+    font-style: italic;
+}
+
+.social {
+    width: 20%;
+    aspect-ratio: 1/1;
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.contact-long {
+    width: calc(65% - 20px);
+    padding: 20px;
+    font-size: x-large;
+}
+
+.contact-long p:first-child {
+    font-size: 30px;
+}
+
+.contact-short {
+    width: calc(35% - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-short button {
+    margin: 0 auto;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #ea25c2;
+    color: white;
+    font-size: large;
+}
+
+.contact-short-b {
+    width: calc(35% - 20px);
+    display: block;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.pink-text {
+    color: #ea25c2;
+}
+
+.contact-long-b {
+    width: calc(65% - 50px);
+    font-size: x-large;
+}
+
+.contact-long-b p {
+    padding: 0 20px;
+}
+
+.contact-long-b p:first-child {
+    font-size: xx-large;
+}
+
+.form-contact {
+    width: calc(100% - 20px);
+    padding: 20px;
+}
+
+.form-contact input {
+    width: 65%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.form-contact button {
+    width: 20%;
+    height: 50px;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.footer div {
+    background-color: grey;
+    text-align: center;
+    padding: 30px;
+}
