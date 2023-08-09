@@ -35,7 +35,6 @@
     width: 100%;
     aspect-ratio: 1.4;
     flex-shrink: 0;
-    position: absolute;
 }
 
 .content {
@@ -95,4 +94,30 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+}
+
+.brow-wrapper {
+    height: auto;
+}
+
+.card {
+    border: none;
+}
+
+.caroucel-wrapper {
+    height: auto;
+}
+
+.carousel-item img {
+    height: auto;
+}
+
+.furniture-img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.footer {
+    margin: 40px 0;
 }
