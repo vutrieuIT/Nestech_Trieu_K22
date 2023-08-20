@@ -312,3 +312,20 @@ input:nth-of-type(5):checked~main#carousel {
 .main-background-color {
     background-color: rgb(255, 224, 153);
 }
+
+
+/* contact */
+.contact-btn {
+    width: 237px;
+    height: 55px;
+    flex-shrink: 0;
+
+    border-radius: 5px;
+    border: 1px solid var(--primary, #B88E2F);
+    background: var(--primary, #B88E2F);
+}
+
+
+.blog-group {
+    margin: 80px 0;
+}
