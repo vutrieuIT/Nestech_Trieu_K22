@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Product</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./singleProduct.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- navbar head -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <!-- 1 -->
+          <div class="col-2">
+            <img src="./img/home/logo.png" alt="" />
+            <a class="navbar-brand" href="#">Furniro</a>
+          </div>
+
+          <!-- 2 -->
+          <div class="col-4 offset-1 navbar-collapse">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around"
+              style="width: 100%"
+            >
+              <li class="nav-item">
+                <a class="nav-link link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="#">Show</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3 -->
+          <div class="col-4 offset-1 d-flex justify-content-around">
+            <img src="./img/home/user_alert.png" alt="" />
+            <img src="./img/home/icons_search.png" alt="" />
+            <img src="./img/home/icons_heart.png" alt="" />
+            <img
+              src="./img/home/icons_cart.png"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              alt=""
+            />
+          </div>
+        </div>
+      </nav>
+
+      <!-- Cart sidebar -->
+      <!-- Modal bs-->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog my-modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Shop Cart</h5>
+              <button
+                type="button"
+                data-bs-dismiss="modal"
+                style="border: none; background-color: white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="19"
+                  viewBox="0 0 17 19"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.11047 9.6734C6.16563 9.6181 6.23115 9.57424 6.30328 9.5443C6.37542 9.51437 6.45275 9.49896 6.53085 9.49896C6.60894 9.49896 6.68628 9.51437 6.75841 9.5443C6.83055 9.57424 6.89607 9.6181 6.95122 9.6734L8.3121 11.0355L9.67297 9.6734C9.78446 9.56191 9.93568 9.49927 10.0933 9.49927C10.251 9.49927 10.4022 9.56191 10.5137 9.6734C10.6252 9.78489 10.6878 9.9361 10.6878 10.0938C10.6878 10.2514 10.6252 10.4027 10.5137 10.5141L9.15166 11.875L10.5137 13.2359C10.6252 13.3474 10.6878 13.4986 10.6878 13.6563C10.6878 13.8139 10.6252 13.9652 10.5137 14.0766C10.4022 14.1881 10.251 14.2508 10.0933 14.2508C9.93568 14.2508 9.78446 14.1881 9.67297 14.0766L8.3121 12.7146L6.95122 14.0766C6.83973 14.1881 6.68852 14.2508 6.53085 14.2508C6.37318 14.2508 6.22196 14.1881 6.11047 14.0766C5.99898 13.9652 5.93635 13.8139 5.93635 13.6563C5.93635 13.4986 5.99898 13.3474 6.11047 13.2359L7.47253 11.875L6.11047 10.5141C6.05518 10.459 6.01131 10.3935 5.98137 10.3213C5.95144 10.2492 5.93604 10.1719 5.93604 10.0938C5.93604 10.0157 5.95144 9.93834 5.98137 9.86621C6.01131 9.79407 6.05518 9.72855 6.11047 9.6734Z"
+                    fill="#9F9F9F"
+                  />
+                  <path
+                    d="M8.3125 1.1875C9.09986 1.1875 9.85497 1.50028 10.4117 2.05703C10.9685 2.61378 11.2812 3.36889 11.2812 4.15625V4.75H5.34375V4.15625C5.34375 3.36889 5.65653 2.61378 6.21328 2.05703C6.77003 1.50028 7.52514 1.1875 8.3125 1.1875ZM12.4688 4.75V4.15625C12.4688 3.05394 12.0309 1.99679 11.2514 1.21734C10.472 0.437889 9.41481 0 8.3125 0C7.21019 0 6.15304 0.437889 5.37359 1.21734C4.59414 1.99679 4.15625 3.05394 4.15625 4.15625V4.75H0V16.625C0 17.2549 0.250223 17.859 0.695621 18.3044C1.14102 18.7498 1.74511 19 2.375 19H14.25C14.8799 19 15.484 18.7498 15.9294 18.3044C16.3748 17.859 16.625 17.2549 16.625 16.625V4.75H12.4688ZM1.1875 5.9375H15.4375V16.625C15.4375 16.9399 15.3124 17.242 15.0897 17.4647C14.867 17.6874 14.5649 17.8125 14.25 17.8125H2.375C2.06006 17.8125 1.75801 17.6874 1.53531 17.4647C1.31261 17.242 1.1875 16.9399 1.1875 16.625V5.9375Z"
+                    fill="#9F9F9F"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="cart-product">
+                <div class="row">
+                  <div class="col-3">
+                    <img src="./img/singleProduct/Asgaard sofa.png" alt="" />
+                  </div>
+                  <div class="col-8">
+                    <h6>Asgaard sofa</h6>
+                    <div class="row">
+                      <div class="col-1">1</div>
+                      <div class="col-1">x</div>
+                      <div class="col-9">Rs. 250,000.00</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-1 d-flex justify-content-center align-items-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M10 0C4.47727 0 0 4.47727 0 10C0 15.5227 4.47727 20 10 20C15.5227 20 20 15.5227 20 10C20 4.47727 15.5227 0 10 0ZM13.37 7.91545C13.5356 7.744 13.6272 7.51436 13.6252 7.276C13.6231 7.03764 13.5275 6.80963 13.3589 6.64107C13.1904 6.47252 12.9624 6.37691 12.724 6.37484C12.4856 6.37277 12.256 6.4644 12.0845 6.63L10 8.71455L7.91545 6.63C7.83159 6.54317 7.73128 6.47392 7.62037 6.42627C7.50946 6.37863 7.39016 6.35355 7.26946 6.3525C7.14875 6.35145 7.02904 6.37445 6.91731 6.42016C6.80559 6.46587 6.70409 6.53338 6.61873 6.61873C6.53338 6.70409 6.46587 6.80559 6.42016 6.91731C6.37445 7.02904 6.35145 7.14875 6.3525 7.26946C6.35355 7.39016 6.37863 7.50946 6.42627 7.62037C6.47392 7.73128 6.54317 7.83159 6.63 7.91545L8.71455 10L6.63 12.0845C6.54317 12.1684 6.47392 12.2687 6.42627 12.3796C6.37863 12.4905 6.35355 12.6098 6.3525 12.7305C6.35145 12.8513 6.37445 12.971 6.42016 13.0827C6.46587 13.1944 6.53338 13.2959 6.61873 13.3813C6.70409 13.4666 6.80559 13.5341 6.91731 13.5798C7.02904 13.6255 7.14875 13.6486 7.26946 13.6475C7.39016 13.6465 7.50946 13.6214 7.62037 13.5737C7.73128 13.5261 7.83159 13.4568 7.91545 13.37L10 11.2855L12.0845 13.37C12.256 13.5356 12.4856 13.6272 12.724 13.6252C12.9624 13.6231 13.1904 13.5275 13.3589 13.3589C13.5275 13.1904 13.6231 12.9624 13.6252 12.724C13.6272 12.4856 13.5356 12.256 13.37 12.0845L11.2855 10L13.37 7.91545Z"
+                        fill="#9F9F9F"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-product">
+                <div class="row">
+                  <div class="col-3">
+                    <img src="./img/singleProduct/Asgaard sofa.png" alt="" />
+                  </div>
+                  <div class="col-8">
+                    <h6>Asgaard sofa</h6>
+                    <div class="row">
+                      <div class="col-1">1</div>
+                      <div class="col-1">x</div>
+                      <div class="col-9">Rs. 250,000.00</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-1 d-flex justify-content-center align-items-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M10 0C4.47727 0 0 4.47727 0 10C0 15.5227 4.47727 20 10 20C15.5227 20 20 15.5227 20 10C20 4.47727 15.5227 0 10 0ZM13.37 7.91545C13.5356 7.744 13.6272 7.51436 13.6252 7.276C13.6231 7.03764 13.5275 6.80963 13.3589 6.64107C13.1904 6.47252 12.9624 6.37691 12.724 6.37484C12.4856 6.37277 12.256 6.4644 12.0845 6.63L10 8.71455L7.91545 6.63C7.83159 6.54317 7.73128 6.47392 7.62037 6.42627C7.50946 6.37863 7.39016 6.35355 7.26946 6.3525C7.14875 6.35145 7.02904 6.37445 6.91731 6.42016C6.80559 6.46587 6.70409 6.53338 6.61873 6.61873C6.53338 6.70409 6.46587 6.80559 6.42016 6.91731C6.37445 7.02904 6.35145 7.14875 6.3525 7.26946C6.35355 7.39016 6.37863 7.50946 6.42627 7.62037C6.47392 7.73128 6.54317 7.83159 6.63 7.91545L8.71455 10L6.63 12.0845C6.54317 12.1684 6.47392 12.2687 6.42627 12.3796C6.37863 12.4905 6.35355 12.6098 6.3525 12.7305C6.35145 12.8513 6.37445 12.971 6.42016 13.0827C6.46587 13.1944 6.53338 13.2959 6.61873 13.3813C6.70409 13.4666 6.80559 13.5341 6.91731 13.5798C7.02904 13.6255 7.14875 13.6486 7.26946 13.6475C7.39016 13.6465 7.50946 13.6214 7.62037 13.5737C7.73128 13.5261 7.83159 13.4568 7.91545 13.37L10 11.2855L12.0845 13.37C12.256 13.5356 12.4856 13.6272 12.724 13.6252C12.9624 13.6231 13.1904 13.5275 13.3589 13.3589C13.5275 13.1904 13.6231 12.9624 13.6252 12.724C13.6272 12.4856 13.5356 12.256 13.37 12.0845L11.2855 10L13.37 7.91545Z"
+                        fill="#9F9F9F"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="total-price">
+                <div class="row justify-content-between">
+                  <div class="col-4" style="text-align: center">subtotal</div>
+                  <div class="col-8" style="text-align: center">
+                    Rs. 520,000.00
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="row justify-content-between w-100">
+                <div class="col-4 d-flex justify-content-center">
+                  <button class="cart-btn" data-bs-dismiss="modal">Cart</button>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <button class="cart-btn" data-bs-dismiss="modal">
+                    Checkout
+                  </button>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                  <button class="cart-btn" data-bs-dismiss="modal">
+                    Comparison
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- webpath -->
+      <div class="webpath d-flex align-items-center">
+        <p>home > Shop > | Asgaard sofa</p>
+      </div>
+      <!-- content -->
+      <div class="content container-fluid">
+        <div class="row">
+          <div class="col-1">
+            <div class="content-img-wrap align-items-center">
+              <img src="./img/singleProduct/Outdoor sofa set 1.png" alt="" />
+            </div>
+            <div class="content-img-wrap">
+              <img src="./img/singleProduct/Outdoor sofa set 1.png" alt="" />
+            </div>
+            <div class="content-img-wrap">
+              <img src="./img/singleProduct/Outdoor sofa set 1.png" alt="" />
+            </div>
+            <div class="content-img-wrap">
+              <img src="./img/singleProduct/Outdoor sofa set 1.png" alt="" />
+            </div>
+          </div>
+
+          <div class="content-img-main col-4">
+            <img src="./img/singleProduct/Asgaard sofa.png" alt="" />
+          </div>
+          <div class="col-6">
+            <h3>Asgaard sofa</h3>
+            <p>Rs. 250,000.00</p>
+            <div class="review-wrap d-inline-flex align-items-center">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <div
+                style="
+                  background: #9f9f9f;
+                  width: 1px;
+                  height: 30px;
+                  margin: auto 10px;
+                "
+              ></div>
+              <p>5 Customer Review</p>
+            </div>
+
+            <p class="review-description">
+              Setting the bar as one of the loudest speakers in its class, the
+              Kilburn is a compact, stout-hearted hero with a well-balanced
+              audio which boasts a clear midrange and extended highs for a
+              sound.
+            </p>
+
+            <h4>size</h4>
+            <div class="size-wrap d-inline-flex">
+              <div class="size choose">L</div>
+              <div class="size">XL</div>
+              <div class="size">XS</div>
+            </div>
+            <h4>color</h4>
+            <div class="color-wrap d-inline-flex">
+              <div class="color-choose" style="background: purple"></div>
+              <div class="color-choose" style="background: black"></div>
+              <div class="color-choose" style="background: orange"></div>
+            </div>
+
+            <div class="button-wrap row">
+              <button class="button p-3 m-2 bo col-2">- 1 +</button>
+              <button class="button p-3 m-2 bo col-3">Add To Cart</button>
+              <button class="button p-3 m-2 bo col-3">+ Compare</button>
+            </div>
+
+            <hr />
+            <div class="row">
+              <div class="col-2">SKU</div>
+              <div class="col-7">: SS001</div>
+            </div>
+            <div class="row">
+              <div class="col-2">Category</div>
+              <div class="col-7">: Sofas</div>
+            </div>
+            <div class="row">
+              <div class="col-2">Tags</div>
+              <div class="col-7">: Sofa, Chair, Home, Shop</div>
+            </div>
+            <div class="row">
+              <div class="col-2">Share</div>
+              <div class="col-7">
+                :
+                <!-- fb -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_117_920)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 10.0558C0 15.0275 3.61083 19.1617 8.33333 20V12.7775H5.83333V10H8.33333V7.7775C8.33333 5.2775 9.94417 3.88917 12.2225 3.88917C12.9442 3.88917 13.7225 4 14.4442 4.11083V6.66667H13.1667C11.9442 6.66667 11.6667 7.2775 11.6667 8.05583V10H14.3333L13.8892 12.7775H11.6667V20C16.3892 19.1617 20 15.0283 20 10.0558C20 4.525 15.5 0 10 0C4.5 0 0 4.525 0 10.0558Z"
+                      fill="black"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_117_920">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <!-- instagram -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_117_924)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.833252 2.365C0.833252 1.95877 0.994624 1.56919 1.28187 1.28195C1.56911 0.994702 1.9587 0.83333 2.36492 0.83333H17.6333C17.8346 0.833001 18.034 0.872383 18.22 0.949219C18.4061 1.02606 18.5752 1.13884 18.7176 1.28111C18.8601 1.42338 18.973 1.59235 19.0501 1.77834C19.1271 1.96433 19.1667 2.16368 19.1666 2.365V17.6333C19.1668 17.8347 19.1273 18.0341 19.0504 18.2202C18.9735 18.4063 18.8606 18.5753 18.7183 18.7178C18.5759 18.8602 18.4069 18.9731 18.2209 19.0502C18.0348 19.1272 17.8354 19.1668 17.6341 19.1667H2.36492C2.16371 19.1667 1.96447 19.127 1.77858 19.05C1.5927 18.973 1.42381 18.8601 1.28157 18.7178C1.13933 18.5754 1.02653 18.4065 0.949604 18.2206C0.87268 18.0346 0.833143 17.8354 0.833252 17.6342V2.365ZM8.08992 7.82333H10.5724V9.07C10.9308 8.35333 11.8474 7.70833 13.2249 7.70833C15.8658 7.70833 16.4916 9.13583 16.4916 11.755V16.6067H13.8191V12.3517C13.8191 10.86 13.4608 10.0183 12.5508 10.0183C11.2883 10.0183 10.7633 10.9258 10.7633 12.3517V16.6067H8.08992V7.82333ZM3.50659 16.4925H6.17992V7.70833H3.50659V16.4917V16.4925ZM6.56242 4.84333C6.56746 5.07222 6.52673 5.29982 6.44262 5.51276C6.35851 5.7257 6.23271 5.91969 6.07261 6.08336C5.91251 6.24702 5.72133 6.37706 5.5103 6.46584C5.29926 6.55461 5.07262 6.60035 4.84367 6.60035C4.61472 6.60035 4.38808 6.55461 4.17704 6.46584C3.966 6.37706 3.77483 6.24702 3.61473 6.08336C3.45463 5.91969 3.32883 5.7257 3.24472 5.51276C3.16061 5.29982 3.11988 5.07222 3.12492 4.84333C3.13481 4.39404 3.32024 3.96649 3.64149 3.65224C3.96274 3.33798 4.39427 3.16201 4.84367 3.16201C5.29307 3.16201 5.7246 3.33798 6.04585 3.65224C6.3671 3.96649 6.55253 4.39404 6.56242 4.84333Z"
+                      fill="black"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_117_924">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <!-- switter -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                >
+                  <path
+                    d="M12.5 1.5625C6.45996 1.5625 1.5625 6.45996 1.5625 12.5C1.5625 18.54 6.45996 23.4375 12.5 23.4375C18.54 23.4375 23.4375 18.54 23.4375 12.5C23.4375 6.45996 18.54 1.5625 12.5 1.5625ZM17.7563 9.80713C17.7637 9.92188 17.7637 10.0415 17.7637 10.1587C17.7637 13.7427 15.0342 17.8711 10.0464 17.8711C8.5083 17.8711 7.08252 17.4243 5.88135 16.6553C6.10107 16.6797 6.31104 16.6895 6.53565 16.6895C7.80518 16.6895 8.97217 16.2598 9.90234 15.5322C8.71094 15.5078 7.70996 14.7266 7.36816 13.6523C7.78564 13.7134 8.16162 13.7134 8.59131 13.6035C7.97785 13.4789 7.42645 13.1457 7.0308 12.6606C6.63515 12.1755 6.41964 11.5684 6.4209 10.9424V10.9082C6.77979 11.1108 7.20215 11.2354 7.64404 11.2524C7.27256 11.0049 6.96792 10.6695 6.75711 10.276C6.5463 9.88244 6.43585 9.443 6.43555 8.99658C6.43555 8.49121 6.56738 8.02979 6.8042 7.62939C7.48511 8.46762 8.33479 9.15318 9.29801 9.64152C10.2612 10.1299 11.3164 10.41 12.395 10.4639C12.0117 8.62061 13.3887 7.12891 15.0439 7.12891C15.8252 7.12891 16.5283 7.45605 17.0239 7.9834C17.6367 7.86865 18.2227 7.63916 18.7451 7.33154C18.5425 7.95898 18.1177 8.48877 17.5537 8.82324C18.1006 8.76465 18.6279 8.61328 19.1162 8.40088C18.7476 8.94287 18.2861 9.42383 17.7563 9.80713Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <!-- detail -->
+
+      <div class="detail container-fluid">
+        <div class="header-detail row align-items-center">
+          <div style="text-align: center" class="offset-3 col-2">
+            Description
+          </div>
+          <div style="text-align: center" class="col-2">
+            Additional Information
+          </div>
+          <div style="text-align: center" class="col-2">Reviews [5]</div>
+        </div>
+
+        <p>
+          Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn
+          portable active stereo speaker takes the unmistakable look and sound
+          of Marshall, unplugs the chords, and takes the show on the road.
+        </p>
+        <p>
+          Weighing in under 7 pounds, the Kilburn is a lightweight piece of
+          vintage styled engineering. Setting the bar as one of the loudest
+          speakers in its class, the Kilburn is a compact, stout-hearted hero
+          with a well-balanced audio which boasts a clear midrange and extended
+          highs for a sound that is both articulate and pronounced. The analogue
+          knobs allow you to fine tune the controls to your personal preferences
+          while the guitar-influenced leather strap enables easy and stylish
+          travel.
+        </p>
+        <div class="row gx-3">
+          <div class="detail-img p-3 col-6">
+            <img src="./img/singleProduct/detail1.png" alt="" />
+          </div>
+          <div class="detail-img p-3 col-6">
+            <img src="./img/singleProduct/detail2.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- relation -->
+      <div class="relation-wrap container-fluid g-5">
+        <h1 style="text-align: center">Relation Product</h1>
+        <div class="row gx-3 gy-3">
+          <div class="card col-3">
+            <img
+              class="card-img-top"
+              src="./img/home/card1.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card col-3">
+            <img
+              class="card-img-top"
+              src="./img/home/card2.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card col-3">
+            <img
+              class="card-img-top"
+              src="./img/home/card1.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card col-3">
+            <img
+              class="card-img-top"
+              src="./img/home/card1.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card col-3">
+            <img
+              class="card-img-top"
+              src="./img/home/card1.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card col-3">
+            <img
+              class="card-img-top"
+              src="./img/home/card1.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card col-3">
+            <img
+              class="card-img-top"
+              src="./img/home/card1.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card col-3">
+            <img
+              class="card-img-top"
+              src="./img/home/card1.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <hr />
+      <div class="footer container">
+        <div class="row">
+          <div class="col-4">
+            <h2>Funiro.</h2>
+            <p>
+              400 University Drive Suite 200 Coral Gables,<br />
+              FL 33134 USA
+            </p>
+          </div>
+          <div class="col-2">
+            <a class="nav-link link" href="#">Home</a>
+            <a class="nav-link link" href="#">Home</a>
+            <a class="nav-link link" href="#">Home</a>
+            <a class="nav-link link" href="#">Home</a>
+            <a class="nav-link link" href="#">Home</a>
+          </div>
+          <div class="col-2">
+            <a class="nav-link link" href="#">Home</a>
+            <a class="nav-link link" href="#">Home</a>
+            <a class="nav-link link" href="#">Home</a>
+            <a class="nav-link link" href="#">Home</a>
+          </div>
+
+          <div class="col-4">
+            <h6>Newsletter</h6>
+            <div class="row">
+              <div class="col-8">
+                <input type="text" placeholder="Enter Your Email Address" />
+              </div>
+              <div class="col-4">
+                <button>SUBSCRIBE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+        <footer>2023 furino. All rights reverved</footer>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
