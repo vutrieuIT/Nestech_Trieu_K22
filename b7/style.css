@@ -41,7 +41,7 @@
 }
 
 .content-wrapper {
-    background: url('./img/img-background.png'), lightgray 50% / cover no-repeat;
+    background: url('./img/home/img-background.png'), lightgray 50% / cover no-repeat;
     width: 100%;
     aspect-ratio: 1.4;
     flex-shrink: 0;
