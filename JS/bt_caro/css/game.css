@@ -86,15 +86,15 @@ table {
 .x {
     color: darksalmon;
     position: relative;
-    top: -8px;
-    font-size: 1.2em;
+    top: -15px;
+    font-size: 1.0em;
     cursor: default;
 }
 
 .o {
     color: aquamarine;
     position: relative;
-    top: -7px;
+    top: -20px;
     font-size: 1.0em;
     cursor: default;
 }

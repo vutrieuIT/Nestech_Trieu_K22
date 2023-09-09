@@ -1,16 +1,10 @@
-import { Constants } from "./Constants.js";
-const constants = new Constants();
-let matrixGame = [50][50];
+let matrixGame = Array.from(Array(50), () => new Array(50));
+let player = X;
 
 function render() {
   const urlParam = new URLSearchParams(window.location.search);
   const row = urlParam.get("row");
   const column = urlParam.get("column");
-
-  // set constants game
-  constants.setRow(row);
-  constants.setColumn(column);
-  constants.setCount(0);
 
   const table = document.getElementById("table_game");
   for (let i = 1; i <= row; i++) {
@@ -35,8 +29,42 @@ function handleClick(id) {
 
 function processClick(id) {
   const point = id.split("-");
-  console.log(point);
-  //   console.log(matrixGame[Number(point[0])][Number(point[1])]);
+  const row = Number(point[0]);
+  const column = Number(point[1]);
+  console.log("processClick");
+  if (matrixGame[row][column] !== undefined) {
+    console.log("!undefined");
+    return;
+  } else {
+    if (player === X) {
+      matrixGame[row][column] = X;
+      document.getElementById(id).innerHTML = XText;
+    }
+    if (player === O) {
+      matrixGame[row][column] = O;
+      document.getElementById(id).innerHTML = OText;
+    }
+    // check win
+    if (checkWin(player)) {
+      return WIN;
+    }
+
+    // check draw
+    if (checkDraw(player)) {
+      return DRAW;
+    }
+    //   chuyen nguoi choi
+    player = player === X ? O : X;
+  }
+}
+
+function checkWin(player) {
+  // todo
+  return false;
+}
+function checkDraw(player) {
+  // todo
+  return false;
 }
 
 render();
