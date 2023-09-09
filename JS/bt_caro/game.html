@@ -9,8 +9,38 @@
   </head>
 
   <body>
+    <h2 id="player">Player : X</h2>
     <table id="table_game"></table>
+    <div id="modal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">END GAME</h5>
+          </div>
+          <div class="modal-body">
+            <p id="content-end-game"></p>
+            <p>bạn có muốn chơi tiếp không???</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="playAgain(true)"
+            >
+              Có
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="playAgain(false)"
+            >
+              Không
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./js/Constants.js"></script>
-    <script type="module" src="./js/render.js"></script>
+    <script src="./js/game.js"></script>
   </body>
 </html>

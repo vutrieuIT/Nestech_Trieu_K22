@@ -31,13 +31,22 @@ h3 {
     margin: 10px 0 2px 0;
 }
 
+#player {
+    position: fixed;
+    left: 20px;
+    color: red;
+    font-size: 2rem;
+}
+
 table {
     margin: 2% auto;
     border-collapse: collapse;
 }
 
+
 #table_game {
     position: relative;
+    top: 30px;
     font-size: 120px;
     margin: 1% auto;
     border-collapse: collapse;
